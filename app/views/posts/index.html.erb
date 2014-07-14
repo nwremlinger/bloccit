@@ -1,8 +1,16 @@
 
 <h1>All Posts</h1>
+<<<<<<< HEAD
  <% if policy(Post.new).create? %> 
   <%= link_to "New Post", new_post_path, class: 'btn btn-success' %>
  <% end %> 
+=======
+
+<% if policy(Post.new).create? %>
+ <%= link_to "New Post", new_post_path, class: 'btn btn-success' %>
+<% end %>
+
+>>>>>>> adding-pundit
 
 <% @posts.each do |post| %>
   <div class="media">
