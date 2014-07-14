@@ -40,6 +40,12 @@ posts = Post.all
   )
 end
 
+User.first.update_attributes(
+  email: 'nwremlinger@gmail.com',
+  password: '123456',
+)
+
+
 
 
 puts "Seed finished"
