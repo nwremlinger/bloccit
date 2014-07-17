@@ -10,10 +10,9 @@
     </ul>
   </div>
   <div class="col-md-8">
-     
-    <%= simple_form_for @topic, html: {class: 'form-control'} do |f| %>
-      <%= f.input :name, placeholder: 'Name' %>
-      <%= f.input :description, as: :text %>
+    <%= simple_form_for [@topic, @post], html: {class: 'form-control form-horizontal'} do |f| %>
+      <%= f.input :title, placeholder: 'Name' %>
+      <%= f.input :body, as: :text %>
       <%= f.button :submit %>
     <% end %>
 
