@@ -40,6 +40,7 @@ gem 'carrierwave'
  gem 'mini_magick'
 gem "fog", "~> 1.3.1"
 
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

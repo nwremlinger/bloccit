@@ -1,0 +1,18 @@
+# Add application configuration variables here, as shown below.
+#
+# PUSHER_APP_ID: "2954"
+# PUSHER_KEY: 7381a978f7dd7f9a1117
+# PUSHER_SECRET: abdc3b896a0ffb85d373
+# STRIPE_API_KEY: EdAvEPVEC3LuaTg5Q3z6WbDVqZlcBQ8Z
+# STRIPE_PUBLIC_KEY: pk_BRgD57O8fHja9HxduJUszhef6jCyS
+
+SENDGRID_PASSWORD: rrlpsr2m
+SENDGRID_USERNAME: app26700261@heroku.com
+DEVISE_SECRET_KEY: 3b8c13085ddc9969c910542b3da117520b776e1743358f3a4474e46882965f34eebc089d8ac4e31f875f44ee27ae9889a75ff2a6cfdae3f404eebcb5f854ba3
+
+AWS_ACCESS_KEY_ID: AKIAIL4HWBRYR2OKRMTA
+ AWS_SECRET_ACCESS_KEY: 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
+ development:
+   AWS_BUCKET: nick-bloccit-development
+ production:
+   AWS_BUCKET: nick-bloccit-production
