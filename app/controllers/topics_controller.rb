@@ -10,8 +10,8 @@ class TopicsController < ApplicationController
   end
 
   def show
-     @topic = Topic.find(params[:id])
-      @posts = @topic.paginate(page: params[:page], per_page: 10)
+    @topic = Topic.find(params[:id])
+    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
      authorize @topic
   end
 
@@ -41,4 +41,6 @@ class TopicsController < ApplicationController
        render :edit
      end
    end
+
+  
 end

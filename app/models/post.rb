@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
     validates :topic, presence: true
     validates :user, presence: true
 
-<<<<<<< HEAD
+
   def markdown_title
     render_as_markdown title
   end
@@ -19,6 +19,4 @@ class Post < ActiveRecord::Base
     render_as_markdown title
   end
 
-=======
->>>>>>> 67aa8ade2fe733a2f0535a9fafe4217b510edc52
 end

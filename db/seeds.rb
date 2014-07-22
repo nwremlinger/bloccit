@@ -22,6 +22,7 @@ users = User.all
  topics = Topic.all
 
 
+
 # Note: by calling `User.new` instead of `create`,
 # we create an instance of User which isn't immediately saved to the database.
 
@@ -42,14 +43,15 @@ users = User.all
 end
 posts = Post.all
 
+
 # Create Comments
 100.times do
-  Comment.create(
-    # user: users.sample,   # we have not yet associated Users with Comments
-    post: posts.sample,
-    body: Faker::Lorem.paragraph
-  )
-end
+   Comment.create(
+    user: users.sample,
+     post: posts.sample,
+     body: Faker::Lorem.paragraph
+   )
+ end
 
 # Create an admin user
  admin = User.new(
