@@ -1,6 +1,8 @@
 require 'rails_helper'
  
+
  describe Post do 
+
    describe "vote methods" do
  
      before do
