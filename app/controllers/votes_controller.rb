@@ -15,6 +15,11 @@ class VotesController < ApplicationController
 
   private
 
+  def load_post_and_vote
+    @post = Post.find(params[:post_id])
+    @topic = @post.topic
+  end
+
   def update_vote(new_value)
     if @vote
        authorize @vote, :update?
@@ -26,6 +31,4 @@ class VotesController < ApplicationController
     end
   end
 
-  def load_post_and_vote
-  end
 end
