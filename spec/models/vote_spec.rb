@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe Vote do
+  include TestFactories
+  
   
 
   describe "validations" do
@@ -26,4 +28,11 @@ describe Vote do
       vote.save
     end
   end
+
+  def post_without_user
+   post = Post.new(title: 'Post title', body: 'Post bodies must be pretty long.')
+   allow(post).to receive(:create_vote)
+   post.save
+   post
+ end
 end

@@ -37,8 +37,7 @@ class Post < ActiveRecord::Base
 
    update_attribute(:rank, new_rank)
    end
-
-  # after_create :create_vote
+  after_create :create_vote
 
   private
 
@@ -49,7 +48,7 @@ class Post < ActiveRecord::Base
     (redcarpet.render text).html_safe
   end
 
-  # def create_vote
-  #   user.votes.create(value: 1, post: self)
-  # end
+  def create_vote
+    user.votes.create(value: 1, post: self)
+   end
 end
