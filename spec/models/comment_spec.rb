@@ -12,6 +12,9 @@
        @comment = Comment.new(body: 'My comment', post: @post, user_id: 10000)
      end
  
+     context "with user's permission" do
+
+
      it "sends an email to users who have favorited the post" do
        @user.favorites.where(post: @post).create 
  
@@ -22,12 +25,20 @@
  
        @comment.save
      end
+   end
  
-     it "does not send emails to users who haven't" do
-       expect( FavoriteMailer )
-         .not_to receive(:new_comment)
+     context "without permission" do
  
-       @comment.save
+       before { @user.update_attribute(:email_favorites, false) }
+ 
+       it "does not send emails, even to users who have favorited" do
+         @user.favorites.where(post: @post).create
+ 
+         expect( FavoriteMailer )
+           .not_to receive(:new_comment)
+         
+         @comment.save
+       end
      end
    end
  end

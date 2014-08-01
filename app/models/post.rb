@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   has_many :favorites, dependent: :destroy
   
 
+
   default_scope { order('rank DESC') }
 
   validates :title, length: {minimum: 5}, presence: true

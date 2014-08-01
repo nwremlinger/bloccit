@@ -17,6 +17,7 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
